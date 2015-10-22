@@ -1,0 +1,618 @@
+Last login: Thu Oct 22 11:21:02 on console
+Erics-MBP:~ EricTran$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+Erics-MBP:~ EricTran$ cd documents
+Erics-MBP:documents EricTran$ cd "coding dojo"
+Erics-MBP:coding dojo EricTran$ ls
+Assignment 1.html		PPC Lubricants - LESS
+Assignment 2.html		Shapes
+Assignment 3			WordStream
+FreeBSD Assignment		commands.txt
+Git - Branching and Merging	new_project
+Loups Assignment		test- Git assignment 1
+PPC Lubricants
+Erics-MBP:coding dojo EricTran$ cd "Git - Branching and Merging"
+Erics-MBP:Git - Branching and Merging EricTran$ ls
+7874210.jpg				tumblr_mspvqyzYiI1sfl6l8o1_1280.jpg
+amanotank.jpg				welcome.jpg
+Erics-MBP:Git - Branching and Merging EricTran$ touch index.html
+Erics-MBP:Git - Branching and Merging EricTran$ touch style.css
+Erics-MBP:Git - Branching and Merging EricTran$ ls
+7874210.jpg				style.css
+amanotank.jpg				tumblr_mspvqyzYiI1sfl6l8o1_1280.jpg
+index.html				welcome.jpg
+Erics-MBP:Git - Branching and Merging EricTran$ git init
+Initialized empty Git repository in /Users/EricTran/Documents/Coding Dojo/Git - Branching and Merging/.git/
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	7874210.jpg
+	amanotank.jpg
+	index.html
+	style.css
+	tumblr_mspvqyzYiI1sfl6l8o1_1280.jpg
+	welcome.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+Erics-MBP:Git - Branching and Merging EricTran$ git add .
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .DS_Store
+	new file:   7874210.jpg
+	new file:   amanotank.jpg
+	new file:   index.html
+	new file:   style.css
+	new file:   tumblr_mspvqyzYiI1sfl6l8o1_1280.jpg
+	new file:   welcome.jpg
+
+Erics-MBP:Git - Branching and Merging EricTran$ git commit -m "First Commit"
+[master (root-commit) ffc883b] First Commit
+ 7 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 7874210.jpg
+ create mode 100644 amanotank.jpg
+ create mode 100644 index.html
+ create mode 100644 style.css
+ create mode 100644 tumblr_mspvqyzYiI1sfl6l8o1_1280.jpg
+ create mode 100644 welcome.jpg
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+nothing to commit, working directory clean
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Erics-MBP:Git - Branching and Merging EricTran$ git add index.html
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+Erics-MBP:Git - Branching and Merging EricTran$ git commit -m "Added HTML"
+[master 138c329] Added HTML
+ 1 file changed, 20 insertions(+)
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+nothing to commit, working directory clean
+Erics-MBP:Git - Branching and Merging EricTran$ git log
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+Erics-MBP:Git - Branching and Merging EricTran$ git add index.html
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+
+Erics-MBP:Git - Branching and Merging EricTran$ git add .
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   .DS_Store
+	modified:   index.html
+
+Erics-MBP:Git - Branching and Merging EricTran$ git commit -m "fixed image not displaying"
+[master 2e1f39b] fixed image not displaying
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+nothing to commit, working directory clean
+Erics-MBP:Git - Branching and Merging EricTran$ git log
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Erics-MBP:Git - Branching and Merging EricTran$ git log
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+Erics-MBP:Git - Branching and Merging EricTran$ git checkout -b "add-css"
+M	.DS_Store
+M	index.html
+M	style.css
+Switched to a new branch 'add-css'
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch add-css
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+	modified:   index.html
+	modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Erics-MBP:Git - Branching and Merging EricTran$ git add index.html
+Erics-MBP:Git - Branching and Merging EricTran$ git add style.css
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch add-css
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+	modified:   style.css
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+
+Erics-MBP:Git - Branching and Merging EricTran$ git commit -am "Added CSS"
+[add-css 5f08b3f] Added CSS
+ 3 files changed, 25 insertions(+), 3 deletions(-)
+Erics-MBP:Git - Branching and Merging EricTran$ git status
+On branch add-css
+nothing to commit, working directory clean
+Erics-MBP:Git - Branching and Merging EricTran$ git checkout master
+Switched to branch 'master'
+Erics-MBP:Git - Branching and Merging EricTran$ git checkout add-css
+Switched to branch 'add-css'
+Erics-MBP:Git - Branching and Merging EricTran$ git checkout master
+Switched to branch 'master'
+Erics-MBP:Git - Branching and Merging EricTran$ git merge "add-css"
+Updating 2e1f39b..5f08b3f
+Fast-forward
+ .DS_Store  | Bin 6148 -> 6148 bytes
+ index.html |   4 +---
+ style.css  |  24 ++++++++++++++++++++++++
+ 3 files changed, 25 insertions(+), 3 deletions(-)
+Erics-MBP:Git - Branching and Merging EricTran$ git log
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOC
+66a33cf
+
+
+
+
+
+a5cc594
+
+
+
+
+
+3d30514
+
+
+
+
+
+4a62b16
+
+
+
+
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOC
+66a33cf
+
+
+
+
+
+a5cc594
+
+
+
+
+
+3d30514
+
+
+
+
+
+4a62b16
+
+
+
+
+ ESCOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ESCOD
+66a33cf
+
+
+
+
+
+a5cc594
+
+
+
+
+
+3d30514
+
+
+
+
+
+4a62b16
+
+
+
+
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+ ESCOD
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+Erics-MBP:Git - Branching and Merging EricTran$ git log
+commit 5f08b3f0ae52130fd77fefe86e94b4f4d66a33cf
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 12:20:30 2015 -0700
+
+    Added CSS
+
+commit 2e1f39b40e31da7523857fa48a3bce08fa5cc594
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:48:04 2015 -0700
+
+    fixed image not displaying
+
+commit 138c32945c6e82ccfd07a3c2905ed5a7d3d30514
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:46:01 2015 -0700
+
+    Added HTML
+
+commit ffc883b50356151d1ba21fd4f4e9cce084a62b16
+Author: Eric <to.erictran@gmail.com>
+Date:   Thu Oct 22 11:37:05 2015 -0700
+
+    First Commit
+:
