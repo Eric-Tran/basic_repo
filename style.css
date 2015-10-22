@@ -7,7 +7,7 @@
 }
 
 h1, p {
-	color: white;
+	color: green;
 
 }
 
@@ -15,7 +15,7 @@ img{
 	display: inline-block;
     width: 450px;
     height: 178.5px;
-    border: 2px solid white;
+    border: 2px solid green;
 
 }
 
